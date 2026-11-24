@@ -1,0 +1,28 @@
+/* Canto inferior direito, por cima de tudo */
+.toasts {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  padding: 12px 18px;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: toast-entrada 0.25s ease-out;
+}
+
+.toast--sucesso { background-color: #059669; }
+.toast--info { background-color: #4f46e5; }
+.toast--erro { background-color: #dc2626; }
+
+@keyframes toast-entrada {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}

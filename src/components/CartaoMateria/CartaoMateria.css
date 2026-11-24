@@ -1,0 +1,84 @@
+.cartao {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px 20px;
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-left: 6px solid var(--cor-primaria);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* O cartão "levanta" ao passar o mouse */
+.cartao:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-md);
+}
+
+.cartao__nome {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.cartao__meta {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--cor-texto-suave);
+}
+
+.cartao__icones {
+  display: flex;
+  gap: 2px;
+}
+
+/* Modo edição */
+.cartao--editando {
+  align-items: center;
+  background-color: var(--cor-primaria-clara);
+}
+
+.cartao--editando:hover {
+  transform: none;
+  box-shadow: var(--sombra-sm);
+}
+
+.cartao__campos {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+
+.cartao__linha {
+  display: flex;
+  gap: 8px;
+}
+
+.cartao__input--curto {
+  width: 90px;
+}
+
+.cartao__cor {
+  width: 44px;
+  height: 38px;
+  padding: 2px;
+  background-color: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cartao__acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cartao__salvar,
+.cartao__cancelar {
+  padding: 8px 14px;
+  font-size: 13px;
+}

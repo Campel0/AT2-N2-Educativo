@@ -1,0 +1,46 @@
+.tarefas__topo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.tarefas__contador {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--cor-texto-suave);
+}
+
+.tarefas__filtros {
+  display: flex;
+  gap: 8px;
+}
+
+.tarefas__filtro {
+  padding: 6px 16px;
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.tarefas__filtro:hover {
+  border-color: var(--cor-primaria);
+}
+
+.tarefas__filtro--ativo {
+  background: var(--gradiente);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.tarefas__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

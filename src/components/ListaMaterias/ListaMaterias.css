@@ -1,0 +1,168 @@
+.layout {
+  display: grid;
+  grid-template-columns: 264px 1fr;
+  min-height: 100vh;
+}
+
+/* Menu lateral fixo na altura da tela */
+.menu {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  background: linear-gradient(180deg, #4338ca 0%, #6d28d9 100%);
+  color: #ffffff;
+}
+
+.menu__marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding: 0 8px;
+}
+
+.menu__icone {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+}
+
+.menu__logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.menu__frase {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px;
+  color: #e0e7ff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.15s, transform 0.15s;
+}
+
+.menu__link:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateX(3px);
+}
+
+/* Link da página atual */
+.menu__link--ativo {
+  background: #ffffff;
+  color: #4338ca;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.menu__link--ativo:hover {
+  background: #ffffff;
+  transform: none;
+}
+
+/* Parte de baixo do menu: timer e tema */
+.menu__rodape {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.menu__timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.menu__timer strong {
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.menu__tema {
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: left;
+  transition: background-color 0.15s;
+}
+
+.menu__tema:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.conteudo {
+  width: 100%;
+  max-width: 1100px;
+  padding: 36px 40px;
+}
+
+/* Grade responsiva: quantas colunas de 270px couberem */
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 16px;
+}
+
+/* Celular/tablet: o menu vira um bloco no topo */
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    position: static;
+    height: auto;
+    padding: 16px;
+  }
+
+  .menu__marca {
+    margin-bottom: 12px;
+  }
+
+  .menu__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .menu__rodape {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+
+  .conteudo {
+    padding: 20px 16px;
+  }
+}
